@@ -88,6 +88,7 @@ Borysov_nosql_2/
 ├── .python-version
 ├── pyproject.toml              # Project configuration and direct dependencies
 ├── uv.lock                     # Locked dependency versions
+├── requirements.txt            # Main dependencies for pip-based installation
 └── README.md
 ```
 
@@ -352,8 +353,6 @@ Embeddings saved to: embeddings/embeddings.npy
 
 Косинусна схожість двох векторів визначається як:
 
-Косинусна схожість двох векторів визначається як:
-
 $$\mathrm{cosine}(x, y) = \frac{x \cdot y}{\|x\| \|y\|}.$$
 
 У цьому проєкті embeddings генеруються з параметром:
@@ -365,8 +364,6 @@ normalize_embeddings=True
 Тому кожен вектор після нормалізації має одиничну довжину:
 
 $$\|x\| = 1, \qquad \|y\| = 1.$$
-
-Після підстановки одиничних норм у формулу cosine similarity отримуємо:
 
 Після підстановки одиничних норм у формулу cosine similarity отримуємо:
 
@@ -1044,9 +1041,10 @@ Vector rank = 2
 making computers understand human emotions from text
 ```
 
-Порівнювалися три значення:
+Порівнювалися чотири значення:
 
 ```python
+k = 1
 k = 10
 k = 60
 k = 100
@@ -1054,15 +1052,15 @@ k = 100
 
 ##### Результати порівняння
 
-| Rank | Title                                                       |   `k=10` |   `k=60` |  `k=100` |
-| ---: | ----------------------------------------------------------- | -------: | -------: | -------: |
-|    1 | On the Development of Text Input Method - Lessons Learned   | 0.160256 | 0.032002 | 0.019513 |
-|    2 | An Automated Evaluation Metric for Chinese Text Entry       | 0.090909 | 0.016393 | 0.009901 |
-|    3 | Opinion Dynamics and Sociophysics                           | 0.090909 | 0.016393 | 0.009901 |
-|    4 | Towards Understanding the Origin of Genetic Languages       | 0.083333 | 0.016129 | 0.009804 |
-|    5 | Extracting the hierarchical organization of complex systems | 0.076923 | 0.015873 | 0.009709 |
+| Rank | Title                                                       |    `k=1` |   `k=10` |   `k=60` |  `k=100` |
+| ---: | ----------------------------------------------------------- | -------: | -------: | -------: | -------: |
+|    1 | On the Development of Text Input Method - Lessons Learned   | 0.583333 | 0.160256 | 0.032002 | 0.019513 |
+|    2 | An Automated Evaluation Metric for Chinese Text Entry       | 0.500000 | 0.090909 | 0.016393 | 0.009901 |
+|    3 | Opinion Dynamics and Sociophysics                           | 0.500000 | 0.090909 | 0.016393 | 0.009901 |
+|    4 | Towards Understanding the Origin of Genetic Languages       | 0.333333 | 0.083333 | 0.016129 | 0.009804 |
+|    5 | Extracting the hierarchical organization of complex systems | 0.250000 | 0.076923 | 0.015873 | 0.009709 |
 
-У проведеному експерименті зміна параметра `k` не змінила порядок top-5 документів. В усіх трьох варіантах перше місце посідає документ `On the Development of Text Input Method - Lessons Learned`, оскільки він присутній у результатах обох методів на високих позиціях.
+У проведеному експерименті зміна параметра `k` не змінила порядок top-5 документів. Для всіх перевірених значень `k = 1`, `k = 10`, `k = 60` та `k = 100` перше місце посідає документ `On the Development of Text Input Method - Lessons Learned`, оскільки він присутній у результатах обох методів на високих позиціях.
 
 Параметр `k` визначає, наскільки сильно RRF враховує різницю між близькими рангами:
 
