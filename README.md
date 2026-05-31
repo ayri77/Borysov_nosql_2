@@ -69,6 +69,13 @@ Borysov_nosql_2/
 ├── data/                       # Generated dataset subset; not committed to Git
 │   └── arxiv_subset.parquet
 ├── embeddings/                 # Generated embedding arrays; not committed to Git
+├── outputs/                    # Full execution logs for each script
+│   ├── 01_prepare_data_output.txt
+│   ├── 02_embed_output.txt
+│   ├── 03_load_to_pinecone_output.txt
+│   ├── 04_search_output.txt
+│   ├── 05_chunking_output.txt
+│   └── 06_hybrid_search_output.txt
 ├── scripts/
 │   ├── 01_prepare_data.py      # Dataset preparation
 │   ├── 02_embed.py             # Dense embedding generation
@@ -247,11 +254,11 @@ $$|x| = 1, \qquad |y| = 1.$$
 
 Для таких векторів косинусна схожість дорівнює скалярному добутку:
 
-$$\operatorname{cosine}(x, y) = \frac{x \cdot y}{|x| |y|} = x \cdot y.$$
+$$\mathrm{cosine}(x, y) = \frac{x \cdot y}{|x| |y|} = x \cdot y.$$
 
 Також квадрат евклідової відстані між нормалізованими векторами дорівнює:
 
-$$\|x-y\|^2 = \|x\|^2 + \|y\|^2 - 2(x \cdot y) = 2 - 2\operatorname{cosine}(x, y).$$
+$$\|x-y\|^2 = \|x\|^2 + \|y\|^2 - 2(x \cdot y) = 2 - 2\mathrm{cosine}(x, y).$$
 
 Отже, за умови нормалізації і векторів документів, і вектора запиту, усі три варіанти повинні давати однакове ранжування результатів:
 
@@ -347,7 +354,7 @@ Embeddings saved to: embeddings/embeddings.npy
 
 Косинусна схожість двох векторів визначається як:
 
-$$\operatorname{cosine}(x, y) = \frac{x \cdot y}{\|x\| \|y\|}.$$
+$$\mathrm{cosine}(x, y) = \frac{x \cdot y}{\|x\| \|y\|}.$$
 
 У цьому проєкті embeddings генеруються з параметром:
 
@@ -363,7 +370,7 @@ $$\|x\| = 1, \qquad \|y\| = 1.$$
 
 Після підстановки одиничних норм у формулу cosine similarity отримуємо:
 
-$$\operatorname{cosine}(x, y) = \frac{x \cdot y}{1 \cdot 1} = x \cdot y.$$
+$$\mathrm{cosine}(x, y) = \frac{x \cdot y}{1 \cdot 1} = x \cdot y.$$
 
 Отже, для нормалізованих embeddings значення `cosine similarity` і `dot product` є однаковими. Відповідно, якщо один і той самий нормалізований embedding запиту порівнюється з однаковим набором нормалізованих embeddings документів, обидві метрики повинні сформувати однакове ранжування результатів пошуку, за винятком можливих незначних числових відхилень, пов'язаних з обчисленнями з плаваючою точкою.
 
@@ -623,11 +630,11 @@ $$|x| = 1, \qquad |y| = 1.$$
 
 Косинусна схожість визначається формулою:
 
-$$\operatorname{cosine}(x, y) = \frac{x \cdot y}{|x| |y|}.$$
+$$\mathrm{cosine}(x, y) = \frac{x \cdot y}{|x| |y|}.$$
 
 Оскільки обидві норми дорівнюють одиниці:
 
-$$\operatorname{cosine}(x, y) = x \cdot y.$$
+$$\mathrm{cosine}(x, y) = x \cdot y.$$
 
 Отже, у нормалізованому просторі `cosine similarity` і `dot product` є еквівалентними та повинні формувати однакове ранжування результатів.
 
@@ -644,7 +651,7 @@ L2-distance                    → менше значення є кращим.
 
 Для нормалізованих векторів квадрат евклідової відстані пов'язаний із cosine similarity формулою:
 
-$$|x-y|^2 = |x|^2 + |y|^2 - 2(x \cdot y) = 2 - 2\operatorname{cosine}(x, y).$$
+$$|x-y|^2 = |x|^2 + |y|^2 - 2(x \cdot y) = 2 - 2\mathrm{cosine}(x, y).$$
 
 Це монотонний зв'язок: чим більша cosine similarity, тим меншою є L2-distance. Тому нормалізовані embeddings дають однакове ранжування для всіх трьох метрик.
 
@@ -1116,7 +1123,7 @@ RETRIEVAL_TOP_K = 10
 У Reciprocal Rank Fusion підсумкова оцінка документа обчислюється за формулою:
 
 $$
-\operatorname{RRF}(d) = \sum_{r \in R(d)} \frac{1}{k + r},
+\mathrm{RRF}(d) = \sum_{r \in R(d)} \frac{1}{k + r},
 $$
 
 де $r$ — позиція документа в одному з ranked lists, а $k$ — параметр згладжування.
@@ -1140,25 +1147,25 @@ BM25 rank = 3
 Vector rank = 2
 ```
 
+
 При `k = 1` документ, знайдений обома методами, отримує:
 
 $$
 \frac{1}{1 + 3} + \frac{1}{1 + 2}
-=================================
-
-# \frac{1}{4} + \frac{1}{3}
-
-0.583333,
+=
+\frac{1}{4} + \frac{1}{3}
+=
+0.583333.
 $$
 
 тоді як документ, що займає перше місце лише в одному зі списків, отримує:
 
 $$
 \frac{1}{1 + 1}
-===============
-
+=
 0.500000.
 $$
+
 
 Тому навіть при сильному пріоритеті верхніх окремих позицій сумарна підтримка двох retrieval-методів залишається достатньою, щоб спільний документ очолював hybrid ranking.
 
@@ -1208,26 +1215,24 @@ normalize_embeddings=True
 Для двох векторів одиничної довжини $x$ і $y$:
 
 $$
-|x| = 1, \qquad |y| = 1.
+\|x\| = 1, \qquad \|y\| = 1.
 $$
 
 Квадрат евклідової відстані між ними дорівнює:
 
 $$
-|x-y|^2
-=======
-
-# (x-y) \cdot (x-y)
-
-|x|^2 + |y|^2 - 2(x \cdot y).
+\|x-y\|^2
+=
+(x-y) \cdot (x-y)
+=
+\|x\|^2 + \|y\|^2 - 2(x \cdot y).
 $$
 
 Оскільки обидві норми дорівнюють одиниці:
 
 $$
-|x-y|^2
-=======
-
+\|x-y\|^2
+=
 2 - 2(x \cdot y).
 $$
 
@@ -1235,21 +1240,19 @@ $$
 
 $$
 x \cdot y
-=========
-
-\operatorname{cosine}(x,y).
+=
+\mathrm{cosine}(x,y).
 $$
 
 Отже:
 
 $$
-|x-y|^2
-=======
-
-2 - 2\operatorname{cosine}(x,y).
+\|x-y\|^2
+=
+2 - 2\mathrm{cosine}(x,y).
 $$
 
-Цей зв'язок є монотонним: чим більшою є cosine similarity, тим меншою є Euclidean distance. Тому для одиничних embeddings:
+Цей зв'язок є монотонним: чим більшою є cosine similarity, тим меншою є Euclidean distance.
 
 ```text
 ranking by maximum cosine similarity
@@ -1283,6 +1286,3 @@ ranking by minimum Euclidean distance
 Залежно від вимог до безпеки, вартості й контролю над інфраструктурою, для великого production-рішення я б розглядав не лише керований Pinecone, але й self-hosted або cloud-managed варіанти на основі Qdrant чи Milvus. Якщо ж у системі вже є PostgreSQL і векторний пошук не є домінуючим високонавантаженим сценарієм, практичним варіантом може бути `pgvector`, щоб не вводити окрему векторну базу даних без достатньої потреби.
 
 Таким чином, Pinecone Starter добре підходить для швидкого навчального прототипу, але результати цього завдання не можна безпосередньо переносити на production-систему з мільйонами документів без окремої оцінки масштабованості, вартості, latency, регіональних і безпекових обмежень.
-
-## Appendix A. Execution outputs
-
