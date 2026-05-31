@@ -1,0 +1,459 @@
+(borysov-nosql-2) PS C:\Users\pbori\Documents\Courses\Neoversity\NoSQL Homework\Borysov_nosql_2> uv run python .\scripts\06_hybrid_search.py
+No sentence-transformers model found with name allenai/specter2_base. Creating a new one with mean pooling.
+
+====================================================================================================
+QUERY EXPERIMENT: 'BERT fine-tuning'
+====================================================================================================
+
+BM25 search
+Query: 'BERT fine-tuning'
+
+1. ID: paper_0705.4387 | BM25 score: 10.9541
+   Title: The NMSSM Solution to the Fine-Tuning Problem, Precision Electroweak Constraints and the Largest LEP Higgs Event Excess
+   Category: hep-ph
+   Year: 2007
+   Abstract: We present an extended study of how the Next to Minimal Supersymmetric Model easily avoids fine-tuning in electroweak symmetry breaking for a SM-like light Higgs with mass in the vicinity of $100\gev$...
+
+2. ID: paper_0705.2982 | BM25 score: 9.2849
+   Title: Fine-Tuning in Brane-antibrane Inflation
+   Category: hep-th
+   Year: 2007
+   Abstract: I give a brief overview of brane-antibrane inflation, with emphasis on the problems of tuning to get a flat potential in the KKLMMT framework, and recent work on the nature of superpotential correctio...
+
+3. ID: paper_0704.3659 | BM25 score: 7.8315
+   Title: Conformal dynamics in gauge theories via non-perturbative renormalization group
+   Category: hep-ph
+   Year: 2007
+   Abstract: The dynamics at the IR fixed point realized in the $SU(N_c)$ gauge theories with massless Dirac fermions is studied by means of the non-perturbative renormalization group. The analysis includes the IR...
+
+4. ID: paper_0704.2570 | BM25 score: 7.1003
+   Title: Inverse Monte-Carlo determination of effective lattice models for SU(3) Yang-Mills theory at finite temperature
+   Category: hep-lat
+   Year: 2007
+   Abstract: This paper concludes our efforts in describing SU(3)-Yang-Mills theories at different couplings/temperatures in terms of effective Polyakov-loop models. The associated effective couplings are determin...
+
+5. ID: paper_0705.0267 | BM25 score: 6.8694
+   Title: Eternal Inflation is "Expensive"
+   Category: hep-th
+   Year: 2007
+   Abstract: The discovery of the string theory landscape has recently brought attention to the eternal nature of inflation. In contrast to the common belief that eternal inflation may be a generic feature of most...
+
+
+Vector search
+Query: 'BERT fine-tuning'
+
+1. ID: paper_0705.2404 | Vector score: 0.8645
+   Title: Misere quotients for impartial games: Supplementary material
+   Category: math.CO
+   Year: 2007
+   Abstract: We provide supplementary appendices to the paper Misere quotients for impartial games. These include detailed solutions to many of the octal games discussed in the paper, and descriptions of the algor...
+
+2. ID: paper_0704.2536 | Vector score: 0.8533
+   Title: Introduction to Phase Transitions in Random Optimization Problems
+   Category: cond-mat.stat-mech
+   Year: 2007
+   Abstract: Notes of the lectures delivered in Les Houches during the Summer School on Complex Systems (July 2006)....
+
+3. ID: paper_0705.2793 | Vector score: 0.8500
+   Title: Abstract Convexity and Cone-Vexing Abstractions
+   Category: math.FA
+   Year: 2007
+   Abstract: This talk is a write-up on some origins of abstract convexity and afew vexing limitations on the range of abstraction in convexity....
+
+4. ID: paper_0706.0249 | Vector score: 0.8481
+   Title: The Compositions of the Differential Operations and Gateaux Directional Derivative
+   Category: math.CO
+   Year: 2007
+   Abstract: In this paper we determine the number of the meaningful compositions of higher order of the differential operations and Gateaux directional derivative....
+
+5. ID: paper_0705.0439 | Vector score: 0.8473
+   Title: Experimental local realism tests without fair sampling assumption
+   Category: quant-ph
+   Year: 2007
+   Abstract: Following the theoretical suggestion of Ref. [1,2], we present experimental results addressed to test restricted families of local realistic models, but without relying on the fair sampling assumption...
+
+
+Hybrid search with RRF (k=60)
+Query: 'BERT fine-tuning'
+
+1. ID: paper_0705.4387 | RRF score: 0.016393 | BM25 rank: 1 | Vector rank: -
+   Title: The NMSSM Solution to the Fine-Tuning Problem, Precision Electroweak Constraints and the Largest LEP Higgs Event Excess
+   Category: hep-ph
+   Year: 2007
+   Abstract: We present an extended study of how the Next to Minimal Supersymmetric Model easily avoids fine-tuning in electroweak symmetry breaking for a SM-like light Higgs with mass in the vicinity of $100\gev$...
+
+2. ID: paper_0705.2404 | RRF score: 0.016393 | BM25 rank: - | Vector rank: 1
+   Title: Misere quotients for impartial games: Supplementary material
+   Category: math.CO
+   Year: 2007
+   Abstract: We provide supplementary appendices to the paper Misere quotients for impartial games. These include detailed solutions to many of the octal games discussed in the paper, and descriptions of the algor...
+
+3. ID: paper_0705.2982 | RRF score: 0.016129 | BM25 rank: 2 | Vector rank: -
+   Title: Fine-Tuning in Brane-antibrane Inflation
+   Category: hep-th
+   Year: 2007
+   Abstract: I give a brief overview of brane-antibrane inflation, with emphasis on the problems of tuning to get a flat potential in the KKLMMT framework, and recent work on the nature of superpotential correctio...
+
+4. ID: paper_0704.2536 | RRF score: 0.016129 | BM25 rank: - | Vector rank: 2
+   Title: Introduction to Phase Transitions in Random Optimization Problems
+   Category: cond-mat.stat-mech
+   Year: 2007
+   Abstract: Notes of the lectures delivered in Les Houches during the Summer School on Complex Systems (July 2006)....
+
+5. ID: paper_0704.3659 | RRF score: 0.015873 | BM25 rank: 3 | Vector rank: -
+   Title: Conformal dynamics in gauge theories via non-perturbative renormalization group
+   Category: hep-ph
+   Year: 2007
+   Abstract: The dynamics at the IR fixed point realized in the $SU(N_c)$ gauge theories with massless Dirac fermions is studied by means of the non-perturbative renormalization group. The analysis includes the IR...
+
+
+====================================================================================================
+QUERY EXPERIMENT: 'Yann LeCun convolutional networks'
+====================================================================================================
+
+BM25 search
+Query: 'Yann LeCun convolutional networks'
+
+1. ID: paper_0704.0282 | BM25 score: 13.5599
+   Title: On Punctured Pragmatic Space-Time Codes in Block Fading Channel
+   Category: cs.IT
+   Year: 2007
+   Abstract: This paper considers the use of punctured convolutional codes to obtain pragmatic space-time trellis codes over block-fading channel. We show that good performance can be achieved even when puncturati...
+
+2. ID: paper_0704.1411 | BM25 score: 13.4451
+   Title: Trellis-Coded Quantization Based on Maximum-Hamming-Distance Binary Codes
+   Category: cs.IT
+   Year: 2007
+   Abstract: Most design approaches for trellis-coded quantization take advantage of the duality of trellis-coded quantization with trellis-coded modulation, and use the same empirically-found convolutional codes ...
+
+3. ID: paper_0704.1849 | BM25 score: 8.1781
+   Title: Response of degree-correlated scale-free networks to stimuli
+   Category: cond-mat.dis-nn
+   Year: 2007
+   Abstract: The response of degree-correlated scale-free attractor networks to stimuli is studied. We show that degree-correlated scale-free networks are robust to random stimuli as well as the uncorrelated scale...
+
+4. ID: paper_0704.1144 | BM25 score: 7.9727
+   Title: Optimization in Gradient Networks
+   Category: cond-mat.stat-mech
+   Year: 2007
+   Abstract: Gradient networks can be used to model the dominant structure of complex networks. Previous works have focused on random gradient networks. Here we study gradient networks that minimize jamming on sub...
+
+5. ID: paper_0704.0392 | BM25 score: 7.7882
+   Title: Simulation of Robustness against Lesions of Cortical Networks
+   Category: q-bio.NC
+   Year: 2007
+   Abstract: Structure entails function and thus a structural description of the brain will help to understand its function and may provide insights into many properties of brain systems, from their robustness and...
+
+
+Vector search
+Query: 'Yann LeCun convolutional networks'
+
+1. ID: paper_0705.0211 | Vector score: 0.8479
+   Title: Multilayer Perceptron with Functional Inputs: an Inverse Regression Approach
+   Category: math.ST
+   Year: 2007
+   Abstract: Functional data analysis is a growing research field as more and more practical applications involve functional data. In this paper, we focus on the problem of regression and classification with funct...
+
+2. ID: paper_0705.0819 | Vector score: 0.8431
+   Title: The Netsukuku network topology
+   Category: cs.NI
+   Year: 2007
+   Abstract: In this document, we describe the fractal structure of the Netsukuku topology. Moreover, we show how it is possible to use the QSPN v2 on the high levels of the fractal....
+
+3. ID: paper_0706.0249 | Vector score: 0.8429
+   Title: The Compositions of the Differential Operations and Gateaux Directional Derivative
+   Category: math.CO
+   Year: 2007
+   Abstract: In this paper we determine the number of the meaningful compositions of higher order of the differential operations and Gateaux directional derivative....
+
+4. ID: paper_0704.0611 | Vector score: 0.8346
+   Title: Modeling the field of laser welding melt pool by RBFNN
+   Category: physics.comp-ph
+   Year: 2007
+   Abstract: Efficient control of a laser welding process requires the reliable prediction of process behavior. A statistical method of field modeling, based on normalized RBFNN, can be successfully used to predic...
+
+5. ID: paper_0705.3370 | Vector score: 0.8314
+   Title: Adaptive classification of temporal signals in fixed-weights recurrent neural networks: an existence proof
+   Category: math.OC
+   Year: 2007
+   Abstract: We address the important theoretical question why a recurrent neural network with fixed weights can adaptively classify time-varied signals in the presence of additive noise and parametric perturbatio...
+
+
+Hybrid search with RRF (k=60)
+Query: 'Yann LeCun convolutional networks'
+
+1. ID: paper_0704.1144 | RRF score: 0.030777 | BM25 rank: 4 | Vector rank: 6
+   Title: Optimization in Gradient Networks
+   Category: cond-mat.stat-mech
+   Year: 2007
+   Abstract: Gradient networks can be used to model the dominant structure of complex networks. Previous works have focused on random gradient networks. Here we study gradient networks that minimize jamming on sub...
+
+2. ID: paper_0704.0282 | RRF score: 0.016393 | BM25 rank: 1 | Vector rank: -
+   Title: On Punctured Pragmatic Space-Time Codes in Block Fading Channel
+   Category: cs.IT
+   Year: 2007
+   Abstract: This paper considers the use of punctured convolutional codes to obtain pragmatic space-time trellis codes over block-fading channel. We show that good performance can be achieved even when puncturati...
+
+3. ID: paper_0705.0211 | RRF score: 0.016393 | BM25 rank: - | Vector rank: 1
+   Title: Multilayer Perceptron with Functional Inputs: an Inverse Regression Approach
+   Category: math.ST
+   Year: 2007
+   Abstract: Functional data analysis is a growing research field as more and more practical applications involve functional data. In this paper, we focus on the problem of regression and classification with funct...
+
+4. ID: paper_0704.1411 | RRF score: 0.016129 | BM25 rank: 2 | Vector rank: -
+   Title: Trellis-Coded Quantization Based on Maximum-Hamming-Distance Binary Codes
+   Category: cs.IT
+   Year: 2007
+   Abstract: Most design approaches for trellis-coded quantization take advantage of the duality of trellis-coded quantization with trellis-coded modulation, and use the same empirically-found convolutional codes ...
+
+5. ID: paper_0705.0819 | RRF score: 0.016129 | BM25 rank: - | Vector rank: 2
+   Title: The Netsukuku network topology
+   Category: cs.NI
+   Year: 2007
+   Abstract: In this document, we describe the fractal structure of the Netsukuku topology. Moreover, we show how it is possible to use the QSPN v2 on the high levels of the fractal....
+
+
+====================================================================================================
+QUERY EXPERIMENT: 'making computers understand human emotions from text'
+====================================================================================================
+
+BM25 search
+Query: 'making computers understand human emotions from text'
+
+1. ID: paper_0704.3662 | BM25 score: 17.0357
+   Title: An Automated Evaluation Metric for Chinese Text Entry
+   Category: cs.HC
+   Year: 2007
+   Abstract: In this paper, we propose an automated evaluation metric for text entry. We also consider possible improvements to existing text entry evaluation metrics, such as the minimum string distance error rat...
+
+2. ID: paper_0705.3895 | BM25 score: 16.5871
+   Title: Towards Understanding the Origin of Genetic Languages
+   Category: q-bio.GN
+   Year: 2007
+   Abstract: Molecular biology is a nanotechnology that works--it has worked for billions of years and in an amazing variety of circumstances. At its core is a system for acquiring, processing and communicating in...
+
+3. ID: paper_0704.3665 | BM25 score: 15.6450
+   Title: On the Development of Text Input Method - Lessons Learned
+   Category: cs.CL
+   Year: 2007
+   Abstract: Intelligent Input Methods (IM) are essential for making text entries in many East Asian scripts, but their application to other languages has not been fully explored. This paper discusses how such too...
+
+4. ID: paper_0705.3319 | BM25 score: 12.1345
+   Title: Detecting anchoring in financial markets
+   Category: q-fin.TR
+   Year: 2007
+   Abstract: Anchoring is a term used in psychology to describe the common human tendency to rely too heavily (anchor) on one piece of information when making decisions. A trading algorithm inspired by biological ...
+
+5. ID: paper_0704.3711 | BM25 score: 11.8656
+   Title: Maximal C*-algebras of quotients and injective envelopes of C*-algebras
+   Category: math.OA
+   Year: 2007
+   Abstract: A new C*-enlargement of a C*-algebra $A$ nested between the local multiplier algebra $M_{\text{loc}}(A)$ of $A$ and its injective envelope $I(A)$ is introduced. Various aspects of this maximal C*-alge...
+
+
+Vector search
+Query: 'making computers understand human emotions from text'
+
+1. ID: paper_0705.0891 | Vector score: 0.8287
+   Title: Opinion Dynamics and Sociophysics
+   Category: physics.soc-ph
+   Year: 2007
+   Abstract: No abstract given. Contents: I. Definition and Introduction II. Schelling Model III. Opinion Dynamics IV. Languages, Hierarchies and Football V. Future Directions...
+
+2. ID: paper_0704.3665 | Vector score: 0.8228
+   Title: On the Development of Text Input Method - Lessons Learned
+   Category: cs.CL
+   Year: 2007
+   Abstract: Intelligent Input Methods (IM) are essential for making text entries in many East Asian scripts, but their application to other languages has not been fully explored. This paper discusses how such too...
+
+3. ID: paper_0705.1679 | Vector score: 0.8092
+   Title: Extracting the hierarchical organization of complex systems
+   Category: physics.soc-ph
+   Year: 2007
+   Abstract: Extracting understanding from the growing ``sea'' of biological and socio-economic data is one of the most pressing scientific challenges facing us. Here, we introduce and validate an unsupervised met...
+
+4. ID: paper_0704.1158 | Vector score: 0.8028
+   Title: Novelty and Collective Attention
+   Category: cs.CY
+   Year: 2007
+   Abstract: The subject of collective attention is central to an information age where millions of people are inundated with daily messages. It is thus of interest to understand how attention to novel items propa...
+
+5. ID: paper_0704.2542 | Vector score: 0.8021
+   Title: Narratives within immersive technologies
+   Category: cs.HC
+   Year: 2007
+   Abstract: The main goal of this project is to research technical advances in order to enhance the possibility to develop narratives within immersive mediated environments. An important part of the research is c...
+
+
+Hybrid search with RRF (k=60)
+Query: 'making computers understand human emotions from text'
+
+1. ID: paper_0704.3665 | RRF score: 0.032002 | BM25 rank: 3 | Vector rank: 2
+   Title: On the Development of Text Input Method - Lessons Learned
+   Category: cs.CL
+   Year: 2007
+   Abstract: Intelligent Input Methods (IM) are essential for making text entries in many East Asian scripts, but their application to other languages has not been fully explored. This paper discusses how such too...
+
+2. ID: paper_0704.3662 | RRF score: 0.016393 | BM25 rank: 1 | Vector rank: -
+   Title: An Automated Evaluation Metric for Chinese Text Entry
+   Category: cs.HC
+   Year: 2007
+   Abstract: In this paper, we propose an automated evaluation metric for text entry. We also consider possible improvements to existing text entry evaluation metrics, such as the minimum string distance error rat...
+
+3. ID: paper_0705.0891 | RRF score: 0.016393 | BM25 rank: - | Vector rank: 1
+   Title: Opinion Dynamics and Sociophysics
+   Category: physics.soc-ph
+   Year: 2007
+   Abstract: No abstract given. Contents: I. Definition and Introduction II. Schelling Model III. Opinion Dynamics IV. Languages, Hierarchies and Football V. Future Directions...
+
+4. ID: paper_0705.3895 | RRF score: 0.016129 | BM25 rank: 2 | Vector rank: -
+   Title: Towards Understanding the Origin of Genetic Languages
+   Category: q-bio.GN
+   Year: 2007
+   Abstract: Molecular biology is a nanotechnology that works--it has worked for billions of years and in an amazing variety of circumstances. At its core is a system for acquiring, processing and communicating in...
+
+5. ID: paper_0705.1679 | RRF score: 0.015873 | BM25 rank: - | Vector rank: 3
+   Title: Extracting the hierarchical organization of complex systems
+   Category: physics.soc-ph
+   Year: 2007
+   Abstract: Extracting understanding from the growing ``sea'' of biological and socio-economic data is one of the most pressing scientific challenges facing us. Here, we introduce and validate an unsupervised met...
+
+
+====================================================================================================
+RRF K COMPARISON: 'making computers understand human emotions from text'
+====================================================================================================
+
+Hybrid search with RRF (k=1)
+Query: 'making computers understand human emotions from text'
+
+1. ID: paper_0704.3665 | RRF score: 0.583333 | BM25 rank: 3 | Vector rank: 2
+   Title: On the Development of Text Input Method - Lessons Learned
+   Category: cs.CL
+   Year: 2007
+   Abstract: Intelligent Input Methods (IM) are essential for making text entries in many East Asian scripts, but their application to other languages has not been fully explored. This paper discusses how such too...
+
+2. ID: paper_0704.3662 | RRF score: 0.500000 | BM25 rank: 1 | Vector rank: -
+   Title: An Automated Evaluation Metric for Chinese Text Entry
+   Category: cs.HC
+   Year: 2007
+   Abstract: In this paper, we propose an automated evaluation metric for text entry. We also consider possible improvements to existing text entry evaluation metrics, such as the minimum string distance error rat...
+
+3. ID: paper_0705.0891 | RRF score: 0.500000 | BM25 rank: - | Vector rank: 1
+   Title: Opinion Dynamics and Sociophysics
+   Category: physics.soc-ph
+   Year: 2007
+   Abstract: No abstract given. Contents: I. Definition and Introduction II. Schelling Model III. Opinion Dynamics IV. Languages, Hierarchies and Football V. Future Directions...
+
+4. ID: paper_0705.3895 | RRF score: 0.333333 | BM25 rank: 2 | Vector rank: -
+   Title: Towards Understanding the Origin of Genetic Languages
+   Category: q-bio.GN
+   Year: 2007
+   Abstract: Molecular biology is a nanotechnology that works--it has worked for billions of years and in an amazing variety of circumstances. At its core is a system for acquiring, processing and communicating in...
+
+5. ID: paper_0705.1679 | RRF score: 0.250000 | BM25 rank: - | Vector rank: 3
+   Title: Extracting the hierarchical organization of complex systems
+   Category: physics.soc-ph
+   Year: 2007
+   Abstract: Extracting understanding from the growing ``sea'' of biological and socio-economic data is one of the most pressing scientific challenges facing us. Here, we introduce and validate an unsupervised met...
+
+
+Hybrid search with RRF (k=10)
+Query: 'making computers understand human emotions from text'
+
+1. ID: paper_0704.3665 | RRF score: 0.160256 | BM25 rank: 3 | Vector rank: 2
+   Title: On the Development of Text Input Method - Lessons Learned
+   Category: cs.CL
+   Year: 2007
+   Abstract: Intelligent Input Methods (IM) are essential for making text entries in many East Asian scripts, but their application to other languages has not been fully explored. This paper discusses how such too...
+
+2. ID: paper_0704.3662 | RRF score: 0.090909 | BM25 rank: 1 | Vector rank: -
+   Title: An Automated Evaluation Metric for Chinese Text Entry
+   Category: cs.HC
+   Year: 2007
+   Abstract: In this paper, we propose an automated evaluation metric for text entry. We also consider possible improvements to existing text entry evaluation metrics, such as the minimum string distance error rat...
+
+3. ID: paper_0705.0891 | RRF score: 0.090909 | BM25 rank: - | Vector rank: 1
+   Title: Opinion Dynamics and Sociophysics
+   Category: physics.soc-ph
+   Year: 2007
+   Abstract: No abstract given. Contents: I. Definition and Introduction II. Schelling Model III. Opinion Dynamics IV. Languages, Hierarchies and Football V. Future Directions...
+
+4. ID: paper_0705.3895 | RRF score: 0.083333 | BM25 rank: 2 | Vector rank: -
+   Title: Towards Understanding the Origin of Genetic Languages
+   Category: q-bio.GN
+   Year: 2007
+   Abstract: Molecular biology is a nanotechnology that works--it has worked for billions of years and in an amazing variety of circumstances. At its core is a system for acquiring, processing and communicating in...
+
+5. ID: paper_0705.1679 | RRF score: 0.076923 | BM25 rank: - | Vector rank: 3
+   Title: Extracting the hierarchical organization of complex systems
+   Category: physics.soc-ph
+   Year: 2007
+   Abstract: Extracting understanding from the growing ``sea'' of biological and socio-economic data is one of the most pressing scientific challenges facing us. Here, we introduce and validate an unsupervised met...
+
+
+Hybrid search with RRF (k=60)
+Query: 'making computers understand human emotions from text'
+
+1. ID: paper_0704.3665 | RRF score: 0.032002 | BM25 rank: 3 | Vector rank: 2
+   Title: On the Development of Text Input Method - Lessons Learned
+   Category: cs.CL
+   Year: 2007
+   Abstract: Intelligent Input Methods (IM) are essential for making text entries in many East Asian scripts, but their application to other languages has not been fully explored. This paper discusses how such too...
+
+2. ID: paper_0704.3662 | RRF score: 0.016393 | BM25 rank: 1 | Vector rank: -
+   Title: An Automated Evaluation Metric for Chinese Text Entry
+   Category: cs.HC
+   Year: 2007
+   Abstract: In this paper, we propose an automated evaluation metric for text entry. We also consider possible improvements to existing text entry evaluation metrics, such as the minimum string distance error rat...
+
+3. ID: paper_0705.0891 | RRF score: 0.016393 | BM25 rank: - | Vector rank: 1
+   Title: Opinion Dynamics and Sociophysics
+   Category: physics.soc-ph
+   Year: 2007
+   Abstract: No abstract given. Contents: I. Definition and Introduction II. Schelling Model III. Opinion Dynamics IV. Languages, Hierarchies and Football V. Future Directions...
+
+4. ID: paper_0705.3895 | RRF score: 0.016129 | BM25 rank: 2 | Vector rank: -
+   Title: Towards Understanding the Origin of Genetic Languages
+   Category: q-bio.GN
+   Year: 2007
+   Abstract: Molecular biology is a nanotechnology that works--it has worked for billions of years and in an amazing variety of circumstances. At its core is a system for acquiring, processing and communicating in...
+
+5. ID: paper_0705.1679 | RRF score: 0.015873 | BM25 rank: - | Vector rank: 3
+   Title: Extracting the hierarchical organization of complex systems
+   Category: physics.soc-ph
+   Year: 2007
+   Abstract: Extracting understanding from the growing ``sea'' of biological and socio-economic data is one of the most pressing scientific challenges facing us. Here, we introduce and validate an unsupervised met...
+
+
+Hybrid search with RRF (k=100)
+Query: 'making computers understand human emotions from text'
+
+1. ID: paper_0704.3665 | RRF score: 0.019513 | BM25 rank: 3 | Vector rank: 2
+   Title: On the Development of Text Input Method - Lessons Learned
+   Category: cs.CL
+   Year: 2007
+   Abstract: Intelligent Input Methods (IM) are essential for making text entries in many East Asian scripts, but their application to other languages has not been fully explored. This paper discusses how such too...
+
+2. ID: paper_0704.3662 | RRF score: 0.009901 | BM25 rank: 1 | Vector rank: -
+   Title: An Automated Evaluation Metric for Chinese Text Entry
+   Category: cs.HC
+   Year: 2007
+   Abstract: In this paper, we propose an automated evaluation metric for text entry. We also consider possible improvements to existing text entry evaluation metrics, such as the minimum string distance error rat...
+
+3. ID: paper_0705.0891 | RRF score: 0.009901 | BM25 rank: - | Vector rank: 1
+   Title: Opinion Dynamics and Sociophysics
+   Category: physics.soc-ph
+   Year: 2007
+   Abstract: No abstract given. Contents: I. Definition and Introduction II. Schelling Model III. Opinion Dynamics IV. Languages, Hierarchies and Football V. Future Directions...
+
+4. ID: paper_0705.3895 | RRF score: 0.009804 | BM25 rank: 2 | Vector rank: -
+   Title: Towards Understanding the Origin of Genetic Languages
+   Category: q-bio.GN
+   Year: 2007
+   Abstract: Molecular biology is a nanotechnology that works--it has worked for billions of years and in an amazing variety of circumstances. At its core is a system for acquiring, processing and communicating in...
+
+5. ID: paper_0705.1679 | RRF score: 0.009709 | BM25 rank: - | Vector rank: 3
+   Title: Extracting the hierarchical organization of complex systems
+   Category: physics.soc-ph
+   Year: 2007
+   Abstract: Extracting understanding from the growing ``sea'' of biological and socio-economic data is one of the most pressing scientific challenges facing us. Here, we introduce and validate an unsupervised met...

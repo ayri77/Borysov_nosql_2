@@ -1,0 +1,211 @@
+(borysov-nosql-2) PS C:\Users\pbori\Documents\Courses\Neoversity\NoSQL Homework\Borysov_nosql_2> uv run python .\scripts\04_search.py
+No sentence-transformers model found with name allenai/specter2_base. Creating a new one with mean pooling.
+
+Pure semantic search
+Query: 'teaching machines to recognize objects in pictures'
+
+1. ID: paper_0704.0379 | Score: 0.8288
+   Title: Capturing knots in polymers
+   Category: cond-mat.soft
+   Year: 2007
+   Abstract: This paper visualizes a knot reduction algorithm...
+
+2. ID: paper_0704.3351 | Score: 0.8263
+   Title: Symbolic sensors : one solution to the numerical-symbolic interface
+   Category: physics.ins-det
+   Year: 2007
+   Abstract: This paper introduces the concept of symbolic sensor as an extension of the smart sensor one. Then, the links between the physical world and the symbolic one are introduced. The creation of symbols is...
+
+3. ID: paper_0705.0113 | Score: 0.8256
+   Title: The Mathematics
+   Category: math.HO
+   Year: 2007
+   Abstract: This is an essay that considering the knowledge structure and language of a different nature, attempts to build on an explanation of the object of study and characteristics of the mathematical science...
+
+4. ID: paper_0704.0611 | Score: 0.8170
+   Title: Modeling the field of laser welding melt pool by RBFNN
+   Category: physics.comp-ph
+   Year: 2007
+   Abstract: Efficient control of a laser welding process requires the reliable prediction of process behavior. A statistical method of field modeling, based on normalized RBFNN, can be successfully used to predic...
+
+5. ID: paper_0704.2241 | Score: 0.8146
+   Title: Why should anyone care about computing with anyons?
+   Category: quant-ph
+   Year: 2007
+   Abstract: In this article we present a pedagogical introduction of the main ideas and recent advances in the area of topological quantum computation. We give an overview of the concept of anyons and their exoti...
+
+
+Unfiltered search for comparison
+Query: 'reinforcement learning'
+
+1. ID: paper_0706.0280 | Score: 0.8445
+   Title: Multi-Agent Modeling Using Intelligent Agents in the Game of Lerpa
+   Category: cs.MA
+   Year: 2007
+   Abstract: Game theory has many limitations implicit in its application. By utilizing multiagent modeling, it is possible to solve a number of problems that are unsolvable using traditional game theory. In this ...
+
+2. ID: paper_0704.2536 | Score: 0.8194
+   Title: Introduction to Phase Transitions in Random Optimization Problems
+   Category: cond-mat.stat-mech
+   Year: 2007
+   Abstract: Notes of the lectures delivered in Les Houches during the Summer School on Complex Systems (July 2006)....
+
+3. ID: paper_0704.0985 | Score: 0.8102
+   Title: Architecture for Pseudo Acausal Evolvable Embedded Systems
+   Category: cs.NE
+   Year: 2007
+   Abstract: Advances in semiconductor technology are contributing to the increasing complexity in the design of embedded systems. Architectures with novel techniques such as evolvable nature and autonomous behavi...
+
+4. ID: paper_0704.2139 | Score: 0.8010
+   Title: Why only few are so successful ?
+   Category: physics.pop-ph
+   Year: 2007
+   Abstract: In many professons employees are rewarded according to their relative performance. Corresponding economy can be modeled by taking $N$ independent agents who gain from the market with a rate which depe...
+
+5. ID: paper_0705.0891 | Score: 0.7993
+   Title: Opinion Dynamics and Sociophysics
+   Category: physics.soc-ph
+   Year: 2007
+   Abstract: No abstract given. Contents:   I. Definition and Introduction   II. Schelling Model   III. Opinion Dynamics   IV. Languages, Hierarchies and Football   V. Future Directions...
+
+
+Filtered search A: recent cs.LG papers
+Query: 'reinforcement learning'
+
+No results found.
+
+
+Filtered search B: papers before 2015
+Query: 'reinforcement learning'
+
+1. ID: paper_0706.0280 | Score: 0.8445
+   Title: Multi-Agent Modeling Using Intelligent Agents in the Game of Lerpa
+   Category: cs.MA
+   Year: 2007
+   Abstract: Game theory has many limitations implicit in its application. By utilizing multiagent modeling, it is possible to solve a number of problems that are unsolvable using traditional game theory. In this ...
+
+2. ID: paper_0704.2536 | Score: 0.8194
+   Title: Introduction to Phase Transitions in Random Optimization Problems
+   Category: cond-mat.stat-mech
+   Year: 2007
+   Abstract: Notes of the lectures delivered in Les Houches during the Summer School on Complex Systems (July 2006)....
+
+3. ID: paper_0704.0985 | Score: 0.8102
+   Title: Architecture for Pseudo Acausal Evolvable Embedded Systems
+   Category: cs.NE
+   Year: 2007
+   Abstract: Advances in semiconductor technology are contributing to the increasing complexity in the design of embedded systems. Architectures with novel techniques such as evolvable nature and autonomous behavi...
+
+4. ID: paper_0704.2139 | Score: 0.8010
+   Title: Why only few are so successful ?
+   Category: physics.pop-ph
+   Year: 2007
+   Abstract: In many professons employees are rewarded according to their relative performance. Corresponding economy can be modeled by taking $N$ independent agents who gain from the market with a rate which depe...
+
+5. ID: paper_0705.0891 | Score: 0.7993
+   Title: Opinion Dynamics and Sociophysics
+   Category: physics.soc-ph
+   Year: 2007
+   Abstract: No abstract given. Contents:   I. Definition and Introduction   II. Schelling Model   III. Opinion Dynamics   IV. Languages, Hierarchies and Football   V. Future Directions...
+
+
+Local search: cosine
+Query: 'teaching machines to recognize objects in pictures'
+
+1. ID: paper_0704.0379 | Score: 0.8294
+   Title: Capturing knots in polymers
+   Category: cond-mat.soft
+   Year: 2007
+   Abstract: This paper visualizes a knot reduction algorithm...
+
+2. ID: paper_0704.3351 | Score: 0.8260
+   Title: Symbolic sensors : one solution to the numerical-symbolic interface
+   Category: physics.ins-det
+   Year: 2007
+   Abstract: This paper introduces the concept of symbolic sensor as an extension of the smart sensor one. Then, the links between the physical world and the symbolic one are introduced. The creation of symbols is...
+
+3. ID: paper_0705.0113 | Score: 0.8254
+   Title: The Mathematics
+   Category: math.HO
+   Year: 2007
+   Abstract: This is an essay that considering the knowledge structure and language of a different nature, attempts to build on an explanation of the object of study and characteristics of the mathematical science...
+
+4. ID: paper_0704.0611 | Score: 0.8181
+   Title: Modeling the field of laser welding melt pool by RBFNN
+   Category: physics.comp-ph
+   Year: 2007
+   Abstract: Efficient control of a laser welding process requires the reliable prediction of process behavior. A statistical method of field modeling, based on normalized RBFNN, can be successfully used to predic...
+
+5. ID: paper_0704.3182 | Score: 0.8142
+   Title: Python for Education: Computational Methods for Nonlinear Systems
+   Category: nlin.CD
+   Year: 2007
+   Abstract: We describe a novel, interdisciplinary, computational methods course that uses Python and associated numerical and visualization libraries to enable students to implement simulations for a number of d...
+
+
+Local search: dot
+Query: 'teaching machines to recognize objects in pictures'
+
+1. ID: paper_0704.0379 | Score: 0.8294
+   Title: Capturing knots in polymers
+   Category: cond-mat.soft
+   Year: 2007
+   Abstract: This paper visualizes a knot reduction algorithm...
+
+2. ID: paper_0704.3351 | Score: 0.8260
+   Title: Symbolic sensors : one solution to the numerical-symbolic interface
+   Category: physics.ins-det
+   Year: 2007
+   Abstract: This paper introduces the concept of symbolic sensor as an extension of the smart sensor one. Then, the links between the physical world and the symbolic one are introduced. The creation of symbols is...
+
+3. ID: paper_0705.0113 | Score: 0.8254
+   Title: The Mathematics
+   Category: math.HO
+   Year: 2007
+   Abstract: This is an essay that considering the knowledge structure and language of a different nature, attempts to build on an explanation of the object of study and characteristics of the mathematical science...
+
+4. ID: paper_0704.0611 | Score: 0.8181
+   Title: Modeling the field of laser welding melt pool by RBFNN
+   Category: physics.comp-ph
+   Year: 2007
+   Abstract: Efficient control of a laser welding process requires the reliable prediction of process behavior. A statistical method of field modeling, based on normalized RBFNN, can be successfully used to predic...
+
+5. ID: paper_0704.3182 | Score: 0.8142
+   Title: Python for Education: Computational Methods for Nonlinear Systems
+   Category: nlin.CD
+   Year: 2007
+   Abstract: We describe a novel, interdisciplinary, computational methods course that uses Python and associated numerical and visualization libraries to enable students to implement simulations for a number of d...
+
+
+Local search: l2
+Query: 'teaching machines to recognize objects in pictures'
+
+1. ID: paper_0704.0379 | Distance: 0.5842
+   Title: Capturing knots in polymers
+   Category: cond-mat.soft
+   Year: 2007
+   Abstract: This paper visualizes a knot reduction algorithm...
+
+2. ID: paper_0704.3351 | Distance: 0.5899
+   Title: Symbolic sensors : one solution to the numerical-symbolic interface
+   Category: physics.ins-det
+   Year: 2007
+   Abstract: This paper introduces the concept of symbolic sensor as an extension of the smart sensor one. Then, the links between the physical world and the symbolic one are introduced. The creation of symbols is...
+
+3. ID: paper_0705.0113 | Distance: 0.5910
+   Title: The Mathematics
+   Category: math.HO
+   Year: 2007
+   Abstract: This is an essay that considering the knowledge structure and language of a different nature, attempts to build on an explanation of the object of study and characteristics of the mathematical science...
+
+4. ID: paper_0704.0611 | Distance: 0.6032
+   Title: Modeling the field of laser welding melt pool by RBFNN
+   Category: physics.comp-ph
+   Year: 2007
+   Abstract: Efficient control of a laser welding process requires the reliable prediction of process behavior. A statistical method of field modeling, based on normalized RBFNN, can be successfully used to predic...
+
+5. ID: paper_0704.3182 | Distance: 0.6095
+   Title: Python for Education: Computational Methods for Nonlinear Systems
+   Category: nlin.CD
+   Year: 2007
+   Abstract: We describe a novel, interdisciplinary, computational methods course that uses Python and associated numerical and visualization libraries to enable students to implement simulations for a number of d...

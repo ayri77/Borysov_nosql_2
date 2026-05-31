@@ -1,0 +1,103 @@
+(borysov-nosql-2) PS C:\Users\pbori\Documents\Courses\Neoversity\NoSQL Homework\Borysov_nosql_2> uv run python .\scripts\05_chunking.py
+No sentence-transformers model found with name allenai/specter2_base. Creating a new one with mean pooling.
+
+Chunking summary for 30 longest abstracts
+Fixed-size chunks: 121
+Sentence-based chunks: 121
+Fixed-size chunk words: min=18, max=100, mean=91.3
+Sentence-based chunk words: min=16, max=100, mean=76.3
+
+Fixed-size boundary example
+End of chunk 1: ... upper limit for the optical luminosity of the MS of 5e40 ergs/s at day 20. The details of SN 1987A strongly suggest that it resulted from a merger of
+Start of chunk 2: of 5e40 ergs/s at day 20. The details of SN 1987A strongly suggest that it resulted from a merger of 2 stellar cores of a common envelope (CE) binary,...
+
+Sentence-based boundary example
+End of chunk 1: ...he BJ hitting the PE, with the fastest particles traveling at 0.8 c, and an upper limit for the optical luminosity of the MS of 5e40 ergs/s at day 20.
+Start of chunk 2: The details of SN 1987A strongly suggest that it resulted from a merger of 2 stellar cores of a common envelope (CE) binary, i.e. a "double-degenerate...
+
+Chunk records summary
+Fixed records: 121
+Semantic records: 121
+Batches: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:05<00:00,  2.98s/it]
+Uploading to arxiv-chunks-fixed: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:01<00:00,  1.44s/it]
+Total vectors in 'arxiv-chunks-fixed': 121
+Batches: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:05<00:00,  2.83s/it]
+Uploading to arxiv-chunks-semantic: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:01<00:00,  1.45s/it]
+Total vectors in 'arxiv-chunks-semantic': 121
+
+Fixed-size chunking search
+Query: 'observations of supernova explosions and gamma-ray bursts'
+
+1. ID: fixed_0705.4061_0 | Score: 0.8347
+   Title: High energy afterglows and flares from Gamma-Ray Burst by Inverse Compton emission
+   Category: astro-ph
+   Chunk number: 0
+   Strategy: fixed
+   Chunk: We perform a detailed study of inverse Compton (IC) emission for a fireball undergoing external shock (ES) in either a uniform or a wind-like interstellar medium, and assess the relative importance of IC and synchrotron emissions. We determine the primary model parameters driving the IC to synchrotr...
+
+2. ID: fixed_0705.3846_4 | Score: 0.8263
+   Title: The SN 1987A Link to Gamma-Ray Bursts
+   Category: astro-ph
+   Chunk number: 4
+   Strategy: fixed
+   Chunk: possibly be). There is no need to invent exotica, such as collapsars or hypernovae, to account for GRBs....
+
+3. ID: fixed_0705.4061_1 | Score: 0.8256
+   Title: High energy afterglows and flares from Gamma-Ray Burst by Inverse Compton emission
+   Category: astro-ph
+   Chunk number: 1
+   Strategy: fixed
+   Chunk: account for some of the flares observed in GRB X-ray light curves. We present model predictions, in particular in terms of GeV vs X-ray behavior, and compare them with other models proposed to explain the origin of flares. We find that if most of the emission occurs when the fireball is in the fast ...
+
+4. ID: fixed_0705.3846_2 | Score: 0.8200
+   Title: The SN 1987A Link to Gamma-Ray Bursts
+   Category: astro-ph
+   Chunk number: 2
+   Strategy: fixed
+   Chunk: that the BJ would have caused a full, long-soft gamma-ray burst (lGRB) upon hitting the PE, thus DD can produce lGRBs. The typical 0.5 deg collimation of a GRB, over the 22 lt-d from SN 1987A to its PE, produces ~100 s of delay, MATCHING the observed delay of the non-prompt parts of lGRBs. Because D...
+
+5. ID: fixed_0705.3846_1 | Score: 0.8160
+   Title: The SN 1987A Link to Gamma-Ray Bursts
+   Category: astro-ph
+   Chunk number: 1
+   Strategy: fixed
+   Chunk: of 5e40 ergs/s at day 20. The details of SN 1987A strongly suggest that it resulted from a merger of 2 stellar cores of a common envelope (CE) binary, i.e. a "double-degenerate" (DD)-initiated SN, and is thus the Rosetta Stone for 99% of MSPs in the non-core-collapsed globular clusters, GRBs, and SN...
+
+
+Sentence-based chunking search
+Query: 'observations of supernova explosions and gamma-ray bursts'
+
+1. ID: semantic_0705.4061_0 | Score: 0.8374
+   Title: High energy afterglows and flares from Gamma-Ray Burst by Inverse Compton emission
+   Category: astro-ph
+   Chunk number: 0
+   Strategy: semantic
+   Chunk: We perform a detailed study of inverse Compton (IC) emission for a fireball undergoing external shock (ES) in either a uniform or a wind-like interstellar medium, and assess the relative importance of IC and synchrotron emissions. We determine the primary model parameters driving the IC to synchrotr...
+
+2. ID: semantic_0705.4061_1 | Score: 0.8271
+   Title: High energy afterglows and flares from Gamma-Ray Burst by Inverse Compton emission
+   Category: astro-ph
+   Chunk number: 1
+   Strategy: semantic
+   Chunk: We present model predictions, in particular in terms of GeV vs X-ray behavior, and compare them with other models proposed to explain the origin of flares. We find that if most of the emission occurs when the fireball is in the fast cooling regime, then a substantial GeV emission is expected both fo...
+
+3. ID: semantic_0705.3846_1 | Score: 0.8216
+   Title: The SN 1987A Link to Gamma-Ray Bursts
+   Category: astro-ph
+   Chunk number: 1
+   Strategy: semantic
+   Chunk: The details of SN 1987A strongly suggest that it resulted from a merger of 2 stellar cores of a common envelope (CE) binary, i.e. a "double-degenerate" (DD)-initiated SN, and is thus the Rosetta Stone for 99% of MSPs in the non-core-collapsed globular clusters, GRBs, and SNe, including all recent ne...
+
+4. ID: semantic_0705.3846_2 | Score: 0.8094
+   Title: The SN 1987A Link to Gamma-Ray Bursts
+   Category: astro-ph
+   Chunk number: 2
+   Strategy: semantic
+   Chunk: The typical 0.5 deg collimation of a GRB, over the 22 lt-d from SN 1987A to its PE, produces ~100 s of delay, MATCHING the observed delay of the non-prompt parts of lGRBs. Because DD must be the dominant SN mechanism in elliptical galaxies, where only short, hard GRBs (sGRBs) have been observed, DD ...
+
+5. ID: semantic_0704.2235_0 | Score: 0.8063
+   Title: Swift observations of GRB 060614: an anomalous burst with a well behaved afterglow
+   Category: astro-ph
+   Chunk number: 0
+   Strategy: semantic
+   Chunk: GRB 060614 is a remarkable GRB observed by Swift with puzzling properties, which challenge current progenitor models. The lack of any bright SN down to very strict limits and the vanishing spectral lags are typical of short GRBs, strikingly at odds with the long (102s) duration of this event. Here w...

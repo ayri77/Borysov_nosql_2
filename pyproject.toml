@@ -1,0 +1,17 @@
+[project]
+name = "borysov-nosql-2"
+version = "0.1.0"
+description = "Semantic search over scientific articles"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "numpy==1.26.4",
+    "pandas==2.2.2",
+    "pandas-stubs~=2.2.2",
+    "pinecone>=9.0.1",
+    "pyarrow==23.0.1",
+    "python-dotenv==1.0.1",
+    "rank-bm25==0.2.2",
+    "sentence-transformers==3.0.1",
+    "tqdm==4.66.4",
+]

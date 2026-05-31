@@ -1,0 +1,28 @@
+(borysov-nosql-2) PS C:\Users\pbori\Documents\Courses\Neoversity\NoSQL Homework\Borysov_nosql_2> uv run python .\scripts\01_prepare_data.py
+Читаємо датасет: 10000it [00:00, 127090.49it/s]
+
+Завантажено статей:10000
+
+Розподіл за категоріями (топ-10):
+category
+astro-ph              1838
+hep-th                 680
+hep-ph                 671
+quant-ph               564
+gr-qc                  350
+cond-mat.mes-hall      307
+cond-mat.str-el        292
+cond-mat.mtrl-sci      291
+cond-mat.stat-mech     271
+math.AG                209
+Name: count, dtype: int64
+
+Розподіл за роками:
+year
+2007    10000
+Name: count, dtype: int64
+
+Приклад запису:
+{'id': '0704.0001', 'title': 'Calculation of prompt diphoton production cross sections at Tevatron and   LHC energies', 'abstract': 'A fully differential calculation in perturbative quantum chromodynamics is presented for the production of massive photon pairs at hadron colliders. All next-to-leading order perturbative contributions from quark-antiquark, gluon-(anti)quark, and gluon-gluon subprocesses are included, as well as all-orders resummation of initial-state gluon radiation valid at next-to-next-to-leading logarithmic accuracy. The region of phase space is specified in which the calculation is most reliable. Good agreement is demonstrated with data from the Fermilab Tevatron, and predictions are made for more detailed tests with CDF and DO data. Predictions are shown for distributions of diphoton pairs produced at the energy of the Large Hadron Collider (LHC). Distributions of the diphoton pairs from the decay of a Higgs boson are contrasted with those produced from QCD processes at the LHC, showing that enhanced sensitivity to the signal can be obtained with judicious selection of events.', 'authors': 'BalázsC., BergerE. L., NadolskyP. M., YuanC. -P.', 'year': 2007, 'category': 'hep-ph'}
+
+Збережено в data/arxiv_subset.parquet

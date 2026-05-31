@@ -1,0 +1,7 @@
+(borysov-nosql-2) PS C:\Users\pbori\Documents\Courses\Neoversity\NoSQL Homework\Borysov_nosql_2> uv run python .\scripts\02_embed.py
+No sentence-transformers model found with name allenai/specter2_base. Creating a new one with mean pooling.
+Batches: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 157/157 [11:40<00:00,  4.46s/it]
+Number of encoded texts: 10000
+Embeddings shape: (10000, 768)
+Norm of the first embedding: 1.000000
+Embeddings saved to: embeddings/embeddings.npy
